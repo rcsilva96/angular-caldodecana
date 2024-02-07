@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
 })
 export class PaginaVendaComponent {
 
-  quantidadeTeste: number = 0;
+  quantidadeTeste: number = 0; 
+  precoUnitario: number = 3.00; //preço do produto 1
+  totalGeral: number = 0; // Soma total
 
   // Função para incrementar a quantidade
   incrementarQuantidade() {
@@ -21,6 +23,10 @@ export class PaginaVendaComponent {
     if (this.quantidadeTeste > 0) {
       this.quantidadeTeste--;
     }
+  }
+
+  private atualizarTotalGeral() {
+    this.totalGeral = this.quantidadeTeste * this.precoUnitario;
   }
 
 }

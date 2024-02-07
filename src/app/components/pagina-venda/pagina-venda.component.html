@@ -9,8 +9,10 @@
           <div>
             <img src="assets/icon/neko.png" width="128" height="128"> <br>
             <span>Teste 1</span> <br>
+
+            <span>R$ <strong>{{ precoUnitario }},00</strong></span> <br>
   
-            <!-- Adicionando eventos de clique para os botões -->
+
             <button class="btn" (click)="decrementarQuantidade()">-</button>
             <span id="quantidadeTeste">{{ quantidadeTeste }}</span>
             <button class="btn" (click)="incrementarQuantidade()">+</button>
@@ -18,6 +20,8 @@
   
         </div>
       </div>
+
+      <p>Total vendido: R$ {{ quantidadeTeste * precoUnitario }},00</p>
     </div>
   
 
