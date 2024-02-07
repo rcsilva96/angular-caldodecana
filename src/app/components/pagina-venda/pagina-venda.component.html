@@ -1,0 +1,24 @@
+<div class="text-center mt-3">
+
+    <h1>Página de vendas</h1>
+  
+    <div class="container bg-white rounded-top mt-5" id="zero-pad">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-10 col-12 pt-3" id="carrinho">
+  
+          <div>
+            <img src="assets/icon/neko.png" width="128" height="128"> <br>
+            <span>Teste 1</span> <br>
+  
+            <!-- Adicionando eventos de clique para os botões -->
+            <button class="btn" (click)="decrementarQuantidade()">-</button>
+            <span id="quantidadeTeste">{{ quantidadeTeste }}</span>
+            <button class="btn" (click)="incrementarQuantidade()">+</button>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+
+</div>
