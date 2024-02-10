@@ -1,28 +1,105 @@
+<!-- pagina-venda.component.html -->
 <div class="text-center mt-3">
+  <h1>Página de vendas</h1>
 
-    <h1>Página de vendas</h1>
-  
-    <div class="container bg-white rounded-top mt-5" id="zero-pad">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-10 col-12 pt-3" id="carrinho">
-  
-          <div>
-            <img src="assets/icon/neko.png" width="128" height="128"> <br>
-            <span>Teste 1</span> <br>
+  <div class="container">
 
-            <span>R$ <strong>{{ precoUnitario }},00</strong></span> <br>
-  
+    <div class="row">
 
-            <button class="btn" (click)="decrementarQuantidade()">-</button>
-            <span id="quantidadeTeste">{{ quantidadeTeste }}</span>
-            <button class="btn" (click)="incrementarQuantidade()">+</button>
-          </div>
+      <div class="col bg-primary" (click)="incrementarQuantidade1()">
+
+        <div>
+          <img src="assets/icon/neko.png" width="128" height="128" class="mt-5 mb-5"> <br>
+          <span>Teste 1</span> <br>
   
+          <span>R$ <strong>{{ precoUnitario1 }},00</strong></span> <br>
+  
+          <h4 id="quantidadeTeste">{{ quantidadeTeste1 }}</h4>
         </div>
+  
       </div>
 
-      <p>Total vendido: R$ {{ quantidadeTeste * precoUnitario }},00</p>
-    </div>
+      <div class="col bg-warning" (click)="incrementarQuantidade2()">
+
+        <div>
+          <img src="assets/icon/neko.png" width="128" height="128" class="mt-5 mb-5"> <br>
+          <span>Teste 1</span> <br>
   
+          <span>R$ <strong>{{ precoUnitario2 }},00</strong></span> <br>
+  
+          <h4 id="quantidadeTeste">{{ quantidadeTeste2 }}</h4>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col bg-success" (click)="incrementarQuantidade3()">
+
+        <div>
+          <img src="assets/icon/neko.png" width="128" height="128" class="mt-5 mb-5"> <br>
+          <span>Teste 1</span> <br>
+  
+          <span>R$ <strong>{{ precoUnitario3 }},00</strong></span> <br>
+  
+          <h4 id="quantidadeTeste">{{ quantidadeTeste3 }}</h4>
+        </div>
+  
+      </div>
+
+      <div class="col bg-danger" (click)="incrementarQuantidade4()">
+
+        <div>
+          <img src="assets/icon/neko.png" width="128" height="128" class="mt-5 mb-5"> <br>
+          <span>Teste 1</span> <br>
+  
+          <span>R$ <strong>{{ precoUnitario4 }},00</strong></span> <br>
+  
+          <h4 id="quantidadeTeste">{{ quantidadeTeste4 }}</h4>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="text-center">
+
+      <span>
+
+        <h5>Saldo total</h5>
+        <h4>R$ {{ totalGeral }},00 </h4>
+
+      </span>
+
+    </div>
+
+
+  </div>
 
 </div>
+
+
+
+<!-- <div class="container bg-white rounded-top mt-5" id="zero-pad">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-10 col-12 pt-3" id="carrinho">
+
+      <div>
+        <img src="assets/icon/neko.png" width="128" height="128"> <br>
+        <span>Teste 1</span> <br>
+
+        <span>R$ <strong>{{ precoUnitario }},00</strong></span> <br>
+
+
+        <button class="btn" (click)="decrementarQuantidade()">-</button>
+        <span id="quantidadeTeste">{{ quantidadeTeste }}</span>
+        <button class="btn" (click)="incrementarQuantidade()">+</button>
+      </div>
+
+    </div>
+  </div>
+
+  <p>Total vendido: R$ {{ quantidadeTeste * precoUnitario }},00</p>
+</div> -->

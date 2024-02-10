@@ -9,24 +9,47 @@ import { Component } from '@angular/core';
 })
 export class PaginaVendaComponent {
 
-  quantidadeTeste: number = 0; 
-  precoUnitario: number = 3.00; //preço do produto 1
-  totalGeral: number = 0; // Soma total
+  quantidadeTeste1: number = 0;
+  quantidadeTeste2: number = 0; 
+  quantidadeTeste3: number = 0; 
+  quantidadeTeste4: number = 0;  
 
-  // Função para incrementar a quantidade
-  incrementarQuantidade() {
-    this.quantidadeTeste++;
+  precoUnitario1: number = 3.00; 
+  precoUnitario2: number = 4.00; 
+  precoUnitario3: number = 5.00; 
+  precoUnitario4: number = 6.00; 
+
+  totalGeral: number = 0;
+  
+
+  incrementarQuantidade1() {
+    this.quantidadeTeste1++;
+    this.atualizarTotalGeral();
   }
 
-  // Função para decrementar a quantidade
-  decrementarQuantidade() {
-    if (this.quantidadeTeste > 0) {
-      this.quantidadeTeste--;
-    }
+  incrementarQuantidade2() {
+    this.quantidadeTeste2++;
+    this.atualizarTotalGeral();
   }
+
+  incrementarQuantidade3() {
+    this.quantidadeTeste3++;
+    this.atualizarTotalGeral();
+  }
+
+  incrementarQuantidade4() {
+    this.quantidadeTeste4++;
+    this.atualizarTotalGeral();
+  }
+
+  // decrementarQuantidade() {
+  //   if (this.quantidadeTeste > 0) {
+  //     this.quantidadeTeste--;
+  //   }
+  // }
 
   private atualizarTotalGeral() {
-    this.totalGeral = this.quantidadeTeste * this.precoUnitario;
+    this.totalGeral = (this.quantidadeTeste1 * this.precoUnitario1) + (this.quantidadeTeste2 * this.precoUnitario2) +(this.quantidadeTeste3 * this.precoUnitario3) +(this.quantidadeTeste4 * this.precoUnitario4);
   }
 
 }
